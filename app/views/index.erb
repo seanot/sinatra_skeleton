@@ -1,6 +1,8 @@
 <div class="container">
   <h1>Anagrams!</h1>
-
+  <% if @anagram %>
+    <p >Results: "<span id="anagrams"><%= @anagram %></span>"</p>
+  <% end %>
 
   <form action="/anagram" method="post">
     Enter a word:
