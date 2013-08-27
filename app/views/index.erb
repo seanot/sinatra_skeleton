@@ -1,7 +1,10 @@
 <div class="container">
   <h1>Anagrams!</h1>
   <% if @anagram %>
-    <p >Results: "<span id="anagrams"><%= @anagram %></span>"</p>
+    <% @anagram.each do |t| %>
+      <p><%= t.dictionary_entry %></p>
+    <% end %>
+
   <% end %>
 
   <form action="/anagram" method="post">
